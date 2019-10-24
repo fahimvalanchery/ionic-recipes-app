@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RecipiesService } from './recipies.service';
 import { Recipe } from './recipe.model';
 
@@ -10,7 +10,8 @@ import { Recipe } from './recipe.model';
 export class RecipiesPage implements OnInit {
   constructor(private recipieService: RecipiesService) {}
   recipies: Recipe[];
-  ngOnInit() {
+  ngOnInit() {}
+  ionViewWillEnter() {
     this.recipies = this.recipieService.getAllRecipies();
   }
 }
