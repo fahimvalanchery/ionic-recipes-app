@@ -8,7 +8,7 @@
   <ion-list>
     <ion-item
       *ngFor="let recipie of recipies"
-      [routerLink]="['./', recipie.id]"
+      [routerLink]="['/recipies', recipie.id]"
     >
       <ion-avatar slot="start">
         <ion-img [src]="recipie.imageUrl"></ion-img>
