@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { RecipiesPage } from './recipies.page';
+import { RecipieItemComponent } from './recipie-item/recipie-item.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [RecipiesPage]
+  declarations: [RecipiesPage, RecipieItemComponent]
 })
 export class RecipiesPageModule {}
