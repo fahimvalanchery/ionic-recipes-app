@@ -6,7 +6,7 @@ import { Recipe } from './recipe.model';
 })
 export class RecipiesService {
   private recipeCounter = 0;
-  private startingRecipes = 2;
+  private startingRecipes = 1;
   private recipies: Recipe[] = [
     // {
     //   id: 'r1',
