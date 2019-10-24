@@ -10,8 +10,15 @@ import { Recipe } from './recipe.model';
 export class RecipiesPage implements OnInit {
   constructor(private recipieService: RecipiesService) {}
   recipies: Recipe[];
-  ngOnInit() {}
+  ngOnInit() {
+    this.recipies = [];
+  }
   ionViewWillEnter() {
     this.recipies = this.recipieService.getAllRecipies();
+    if (!this.recipies.length) {
+      setTimeout(() => {
+        this.recipies = this.recipieService.getAllRecipies();
+      }, 5000);
+    }
   }
 }

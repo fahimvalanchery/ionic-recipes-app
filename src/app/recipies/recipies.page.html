@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list *ngIf="recipies.length; else empty">
     <app-recipie-item
       *ngFor="let recipie of recipies"
       [recipieItem]="recipie"
@@ -20,4 +20,9 @@
       <ion-label>{{ recipie.title }}</ion-label>
     </ion-item> -->
   </ion-list>
+  <ng-template #empty>
+    <div>
+      Generating new Recipies...
+    </div>
+  </ng-template>
 </ion-content>

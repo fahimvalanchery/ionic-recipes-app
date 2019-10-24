@@ -28,6 +28,8 @@ export class RecipieDetailPage implements OnInit {
       }
       const recipieId = paramMap.get('recipieId');
       this.loadedRecipie = this.recipieService.getRecipie(recipieId);
+      console.log('this.loadedRecipie');
+      console.log(this.loadedRecipie);
     });
   }
 
