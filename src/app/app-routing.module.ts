@@ -9,7 +9,17 @@ const routes: Routes = [
   },
   {
     path: 'recipies',
-    loadChildren: './recipies/recipies.module#RecipiesPageModule'
+    children: [
+      {
+        path: '',
+        loadChildren: './recipies/recipies.module#RecipiesPageModule'
+      },
+      {
+        path: ':recipieId',
+        loadChildren:
+          './recipies/recipie-detail/recipie-detail.module#RecipieDetailPageModule'
+      }
+    ]
   }
 ];
 
